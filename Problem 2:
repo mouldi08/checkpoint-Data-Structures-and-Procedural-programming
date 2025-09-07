@@ -1,0 +1,29 @@
+Function dot_product(v1, v2, n)
+    result ← 0
+    For i ← 0 to n - 1 do
+        result ← result + (v1[i] * v2[i])
+    EndFor
+    Return result
+EndFunction
+Algorithm CheckOrthogonalVectors_Function
+       Integer k (number of vector pairs)
+       For each pair: arrays v1[], v2[] of length n
+       For each pair, print whether the vectors are orthogonal
+Begin
+    For pair ← 1 to k do
+        Read n
+        Declare arrays v1[0..n-1], v2[0..n-1]
+        For i ← 0 to n - 1 do
+            Read v1[i]
+        EndFor
+        For i ← 0 to n - 1 do
+            Read v2[i]
+        EndFor
+        ps ← dot_product(v1, v2, n) 
+        If ps = 0 then
+            Print "Vectors are orthogonal"
+        Else
+            Print "Vectors are not orthogonal"
+        EndIf
+    EndFor
+End
