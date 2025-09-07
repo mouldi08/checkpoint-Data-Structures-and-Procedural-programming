@@ -1,0 +1,25 @@
+Algorithm SumOfDistinctElements(set1, set2)
+Input: Arrays set1[0..n-1], set2[0..m-1]
+Output: Integer sum
+
+Initialize sum ← 0
+
+For i ← 0 to length of set1 - 1 do
+      Initialize found ← false
+      For j ← 0 to length of set2 - 1 do
+            If set1[i] = set2[j] then
+                found ← true
+                Break
+      If found = false then
+            sum ← sum + set1[i]
+
+For i ← 0 to length of set2 - 1 do
+      Initialize found ← false
+      For j ← 0 to length of set1 - 1 do
+            If set2[i] = set1[j] then
+                found ← true
+                Break
+      If found = false then
+            sum ← sum + set2[i]
+
+Return sum
